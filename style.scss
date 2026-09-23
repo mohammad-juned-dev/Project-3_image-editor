@@ -1,0 +1,51 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: var(--bg-primary-color);
+}
+
+main {
+  width: 100%;
+  section {
+    width: 100%;
+    padding: var(--padding-2xl);
+    .left {
+        display: flex;
+        flex-direction: column;
+        gap: var(--gutter-xl);
+      .top {
+        display: flex;
+        align-items: center;
+        gap: var(--gutter-md);
+        #reset-btn {
+          background-color: var(--bg-danger-color);
+          color: var(--text-primary-color);
+        }
+        #download-btn {
+          background-color: var(--bg-success-color);
+          color: var(--text-primary-color);
+        }
+      }
+      .bottom{
+
+      }
+    }
+  }
+}
+
+.btn {
+  padding: var(--padding-sm) var(--padding-l);
+  border: none;
+  outline: none;
+  border-radius: var(--border-radius-l);
+  background-color: var(--bg-active-color);
+  cursor: pointer;
+}
