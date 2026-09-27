@@ -10,6 +10,7 @@ body {
   width: 100%;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   background-color: var(--bg-primary-color);
+  color: var(--text-primary-color);
 }
 
 main {
@@ -17,10 +18,13 @@ main {
   section {
     width: 100%;
     padding: var(--padding-2xl);
+    display: flex;
+    gap: var(--gutter-xl);
     .left {
-        display: flex;
-        flex-direction: column;
-        gap: var(--gutter-xl);
+      display: flex;
+      flex-direction: column;
+      gap: var(--gutter-xl);
+      width: 60%;
       .top {
         display: flex;
         align-items: center;
@@ -33,9 +37,78 @@ main {
           background-color: var(--bg-success-color);
           color: var(--text-primary-color);
         }
+        #input-image-btn {
+          color: var(--text-active-color);
+        }
       }
-      .bottom{
+      .bottom {
+        background-color: var(--bg-secondary-color);
+        width: 100%;
+        aspect-ratio: 5/3;
+        padding: var(--padding-2xl);
+        border-radius: var(--border-radius-xl);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .placeholder {
+          opacity: 0.6;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          i {
+            font-size: 7rem;
+          }
+          p {
+            font-size: var(--font-size-l);
+          }
+        }
+      }
+    }
+    .right {
+      width: 40%;
+      padding: var(--gutter-xl);
+      background-color: var(--bg-secondary-color);
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      flex-direction: column;
+      gap: var(--gutter-md);
+      border-radius: var(--border-radius-xl);
 
+      .filters {
+        width: 100%;
+        padding: var(--padding-l);
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        flex-direction: column;
+        gap: var(--gutter-md);
+        .filter {
+          width: 100%;
+          input {
+            width: 100%;
+            outline: none;
+            margin-top: var(--margin-sm);
+            appearance: none;
+            border-radius: var(--border-radius-l);
+          }
+          input::-webkit-slider-thumb {
+            appearance: none;
+            cursor: pointer;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            background-color: var(--text-primary-color);
+            margin-top: -8.5px;
+          }
+          input::-webkit-slider-runnable-track {
+            appearance: none;
+            height: 3px;
+            background-color: var(--text-primary-color);
+            border-radius: var(--border-radius-l);
+          }
+        }
       }
     }
   }
@@ -48,4 +121,8 @@ main {
   border-radius: var(--border-radius-l);
   background-color: var(--bg-active-color);
   cursor: pointer;
+  transition: all ease 0.3s;
+}
+.btn:active {
+  scale: 0.95;
 }

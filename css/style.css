@@ -11,6 +11,7 @@ body {
   width: 100%;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   background-color: var(--bg-primary-color);
+  color: var(--text-primary-color);
 }
 
 main {
@@ -19,6 +20,10 @@ main {
 main section {
   width: 100%;
   padding: var(--padding-2xl);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: var(--gutter-xl);
 }
 main section .left {
   display: -webkit-box;
@@ -29,6 +34,7 @@ main section .left {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: var(--gutter-xl);
+  width: 60%;
 }
 main section .left .top {
   display: -webkit-box;
@@ -47,6 +53,115 @@ main section .left .top #download-btn {
   background-color: var(--bg-success-color);
   color: var(--text-primary-color);
 }
+main section .left .top #input-image-btn {
+  color: var(--text-active-color);
+}
+main section .left .bottom {
+  background-color: var(--bg-secondary-color);
+  width: 100%;
+  aspect-ratio: 5/3;
+  padding: var(--padding-2xl);
+  border-radius: var(--border-radius-xl);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+main section .left .bottom .placeholder {
+  opacity: 0.6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+main section .left .bottom .placeholder i {
+  font-size: 7rem;
+}
+main section .left .bottom .placeholder p {
+  font-size: var(--font-size-l);
+}
+main section .right {
+  width: 40%;
+  padding: var(--gutter-xl);
+  background-color: var(--bg-secondary-color);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: var(--gutter-md);
+  border-radius: var(--border-radius-xl);
+}
+main section .right .filters {
+  width: 100%;
+  padding: var(--padding-l);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: var(--gutter-md);
+}
+main section .right .filters .filter {
+  width: 100%;
+}
+main section .right .filters .filter input {
+  width: 100%;
+  outline: none;
+  margin-top: var(--margin-sm);
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: var(--border-radius-l);
+}
+main section .right .filters .filter input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+          appearance: none;
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: var(--text-primary-color);
+  margin-top: -8.5px;
+}
+main section .right .filters .filter input::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+          appearance: none;
+  height: 3px;
+  background-color: var(--text-primary-color);
+  border-radius: var(--border-radius-l);
+}
+
 .btn {
   padding: var(--padding-sm) var(--padding-l);
   border: none;
@@ -54,4 +169,10 @@ main section .left .top #download-btn {
   border-radius: var(--border-radius-l);
   background-color: var(--bg-active-color);
   cursor: pointer;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
+.btn:active {
+  scale: 0.95;
 }/*# sourceMappingURL=style.css.map */
