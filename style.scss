@@ -14,8 +14,12 @@ body {
 }
 
 main {
+
   width: 100%;
   section {
+    background-image: url("https://file.oyephoto.com/uploads/preview/photoshop-editing-background-full-hd-11655264409yq5xrtxmwz.jpg");
+    background-position: center;
+    background-size: cover;
     width: 100%;
     padding: var(--padding-2xl);
     display: flex;
@@ -56,6 +60,7 @@ main {
           align-items: center;
           justify-content: center;
           flex-direction: column;
+         
           i {
             font-size: 7rem;
           }
@@ -63,9 +68,18 @@ main {
             font-size: var(--font-size-l);
           }
         }
+        canvas{
+          // background-color: red;
+          max-width:90% ;
+          max-height:800px ;
+          display: none;
+        }
       }
     }
     .right {
+      background-image: url("https://img.magnific.com/free-vector/colorful-background-with-multicolored-hair-dye_125964-1622.jpg?semt=ais_hybrid&w=740&q=80");
+     background-position: center;
+     background-size: cover;
       width: 40%;
       padding: var(--gutter-xl);
       background-color: var(--bg-secondary-color);
@@ -109,6 +123,13 @@ main {
             border-radius: var(--border-radius-l);
           }
         }
+      }
+      .presets{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: start;
+        gap: var(--gutter-sm);
       }
     }
   }
